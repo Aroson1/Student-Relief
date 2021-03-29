@@ -1,0 +1,814 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Alienx Atomic</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io (2)/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon_io (2)/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon_io (2)/favicon-16x16.png">
+<script src="https://progressier.com/client/script.js?id=zI2KqcPN6YerJKXIMLMK"></script> 
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
+    <meta name="description" content="This is an example dashboard created using build-in elements and components.">
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- For other copyright info kindly contact Alex the below licence must be inculded in every copy/use of a part of this website
+    =========================================================
+    * ArchitectUI HTML Theme Dashboard - v1.0.0
+    =========================================================
+    * Product Page: https://dashboardpack.com
+    * Copyright 2019 DashboardPack (https://dashboardpack.com)
+    * Licensed under MIT (https://github.com/DashboardPack/architectui-html-theme-free/blob/master/LICENSE)
+    =========================================================
+    * Font from fontmeme.com
+    -->
+<link href="./main.css" rel="stylesheet"><style>
+    a:link {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+    color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+    color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:active {
+    color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+    .cards-list {
+      z-index: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+    
+    .card {
+      margin: 30px auto;
+      width: 300px;
+      height: 300px;
+      border-radius: 40px;
+    box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+      cursor: pointer;
+      transition: 0.4s;
+    }
+    
+    .card .card_image {
+      width: inherit;
+      height: inherit;
+      border-radius: 40px;
+    }
+    
+    .card .card_image img {
+      width: inherit;
+      height: inherit;
+      border-radius: 40px;
+      object-fit: cover;
+    }
+    
+    .card .card_title {
+      text-align: center;
+      border-radius: 0px 0px 40px 40px;
+      font-family: sans-serif;
+      font-weight: bold;
+      font-size: 30px;
+      margin-top: -80px;
+      height: 40px;
+    }
+    
+    .card:hover {
+      transform: scale(0.9, 0.9);
+      box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), 
+        -5px -5px 30px 15px rgba(0,0,0,0.22);
+    }
+    
+    .title-white {
+      color: white;
+    }
+    
+    .title-black {
+      color: black;
+    }
+    
+    @media all and (max-width: 500px) {
+      .card-list {
+        /* On small screens, we are no longer using row direction but column */
+        flex-direction: column;
+      }
+    }
+    
+    
+    /*
+    .card {
+      margin: 30px auto;
+      width: 300px;
+      height: 300px;
+      border-radius: 40px;
+      background-image: url('https://i.redd.it/b3esnz5ra34y.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-repeat: no-repeat;
+    box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+      transition: 0.4s;
+    }
+    */
+    </style></head>
+<body>
+    <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
+        <div class="app-header header-shadow bg-asteroid header-text-light bg-asteroid header-text-light">
+            <div class="app-header__logo">
+                <div class="logo-src"></div>
+                <div class="header__pane ml-auto">
+                    <div>
+                        <button type="button" class="hamburger close-sidebar-btn hamburger--elastic is-active" data-class="closed-sidebar">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="app-header__mobile-menu">
+                <div>
+                    <button type="button" class="hamburger hamburger--elastic mobile-toggle-nav">
+                        <span class="hamburger-box">
+                            <span class="hamburger-inner"></span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <div class="app-header__menu">
+                <span>
+                    <button type="button" class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
+                        <span class="btn-icon-wrapper">
+                            <i class="fa fa-ellipsis-v fa-w-6"></i>
+                        </span>
+                    </button>
+                </span>
+            </div>    <div class="app-header__content">
+                
+                <div class="app-header-right">
+                    <div class="header-btn-lg pr-0">
+                        <div class="widget-content p-0">
+                            <div class="widget-content-wrapper">
+                                <div class="widget-content-left">
+                                    <div class="btn-group">
+                                        <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="p-0 btn">
+                                            <img width="42" class="rounded-circle" src="assets/images/avatars/boiman.png" alt="">
+                                            <i class="fa fa-angle-down ml-2 opacity-8"></i>
+                                        </a>
+                                        <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu dropdown-menu-right">
+                                            <button type="button" tabindex="0" class="dropdown-item">User Account</button>
+                                            <button type="button" tabindex="0" class="dropdown-item">Settings</button>
+                                            <h6 tabindex="-1" class="dropdown-header">Menu</h6>
+                                            <button type="button" tabindex="0" class="dropdown-item">Actions</button>
+                                            <div tabindex="-1" class="dropdown-divider"></div>
+                                            <button type="button" tabindex="0" class="dropdown-item">Feedback</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget-content-left  ml-3 header-user-info">
+                                    <div class="widget-heading">
+                                        Student
+                                    </div>
+                                    <div class="widget-subheading">
+                                        RIS ICSE 10th Grade
+                                    </div>
+                                </div>
+                                <div class="widget-content-right header-user-info ml-3">
+                                    <button type="button" class="btn-shadow p-1 btn btn-primary btn-sm show-toastr-example">
+                                        <i class="fa text-white fa-calendar pr-1 pl-1"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>        </div>
+            </div>
+        </div>        <div class="ui-theme-settings">
+            
+            <div class="theme-settings__inner">
+                <div class="scrollbar-container">
+                    <div class="theme-settings__options-wrapper">
+                        <h3 class="themeoptions-heading">Layout Options
+                        </h3>
+                        <div class="p-3">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <div class="widget-content p-0">
+                                        <div class="widget-content-wrapper">
+                                            <div class="widget-content-left mr-3">
+                                                <div class="switch has-switch switch-container-class" data-class="fixed-header">
+                                                    <div class="switch-animate switch-on">
+                                                        <input type="checkbox" checked data-toggle="toggle" data-onstyle="success">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="widget-content-left">
+                                                <div class="widget-heading">Fixed Header
+                                                </div>
+                                                <div class="widget-subheading">Makes the header top fixed, always visible!
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="widget-content p-0">
+                                        <div class="widget-content-wrapper">
+                                            <div class="widget-content-left mr-3">
+                                                <div class="switch has-switch switch-container-class" data-class="fixed-sidebar">
+                                                    <div class="switch-animate switch-on">
+                                                        <input type="checkbox" checked data-toggle="toggle" data-onstyle="success">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="widget-content-left">
+                                                <div class="widget-heading">Fixed Sidebar
+                                                </div>
+                                                <div class="widget-subheading">Makes the sidebar left fixed, always visible!
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="widget-content p-0">
+                                        <div class="widget-content-wrapper">
+                                            <div class="widget-content-left mr-3">
+                                                <div class="switch has-switch switch-container-class" data-class="fixed-footer">
+                                                    <div class="switch-animate switch-off">
+                                                        <input type="checkbox" data-toggle="toggle" data-onstyle="success">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="widget-content-left">
+                                                <div class="widget-heading">Fixed Footer
+                                                </div>
+                                                <div class="widget-subheading">Makes the app footer bottom fixed, always visible!
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <h3 class="themeoptions-heading">
+                            <div>
+                                Header Options
+                            </div>
+                            <button type="button" class="btn-pill btn-shadow btn-wide ml-auto btn btn-focus btn-sm switch-header-cs-class" data-class="">
+                                Restore Default
+                            </button>
+                        </h3>
+                        <div class="p-3">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <h5 class="pb-2">Choose Color Scheme
+                                    </h5>
+                                    <div class="theme-settings-swatches">
+                                        <div class="swatch-holder bg-primary switch-header-cs-class" data-class="bg-primary header-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-secondary switch-header-cs-class" data-class="bg-secondary header-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-success switch-header-cs-class" data-class="bg-success header-text-dark">
+                                        </div>
+                                        <div class="swatch-holder bg-info switch-header-cs-class" data-class="bg-info header-text-dark">
+                                        </div>
+                                        <div class="swatch-holder bg-warning switch-header-cs-class" data-class="bg-warning header-text-dark">
+                                        </div>
+                                        <div class="swatch-holder bg-danger switch-header-cs-class" data-class="bg-danger header-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-light switch-header-cs-class" data-class="bg-light header-text-dark">
+                                        </div>
+                                        <div class="swatch-holder bg-dark switch-header-cs-class" data-class="bg-dark header-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-focus switch-header-cs-class" data-class="bg-focus header-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-alternate switch-header-cs-class" data-class="bg-alternate header-text-light">
+                                        </div>
+                                        <div class="divider">
+                                        </div>
+                                        <div class="swatch-holder bg-vicious-stance switch-header-cs-class" data-class="bg-vicious-stance header-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-midnight-bloom switch-header-cs-class" data-class="bg-midnight-bloom header-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-night-sky switch-header-cs-class" data-class="bg-night-sky header-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-slick-carbon switch-header-cs-class" data-class="bg-slick-carbon header-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-asteroid switch-header-cs-class" data-class="bg-asteroid header-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-royal switch-header-cs-class" data-class="bg-royal header-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-warm-flame switch-header-cs-class" data-class="bg-warm-flame header-text-dark">
+                                        </div>
+                                        <div class="swatch-holder bg-night-fade switch-header-cs-class" data-class="bg-night-fade header-text-dark">
+                                        </div>
+                                        <div class="swatch-holder bg-sunny-morning switch-header-cs-class" data-class="bg-sunny-morning header-text-dark">
+                                        </div>
+                                        <div class="swatch-holder bg-tempting-azure switch-header-cs-class" data-class="bg-tempting-azure header-text-dark">
+                                        </div>
+                                        <div class="swatch-holder bg-amy-crisp switch-header-cs-class" data-class="bg-amy-crisp header-text-dark">
+                                        </div>
+                                        <div class="swatch-holder bg-heavy-rain switch-header-cs-class" data-class="bg-heavy-rain header-text-dark">
+                                        </div>
+                                        <div class="swatch-holder bg-mean-fruit switch-header-cs-class" data-class="bg-mean-fruit header-text-dark">
+                                        </div>
+                                        <div class="swatch-holder bg-malibu-beach switch-header-cs-class" data-class="bg-malibu-beach header-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-deep-blue switch-header-cs-class" data-class="bg-deep-blue header-text-dark">
+                                        </div>
+                                        <div class="swatch-holder bg-ripe-malin switch-header-cs-class" data-class="bg-ripe-malin header-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-arielle-smile switch-header-cs-class" data-class="bg-arielle-smile header-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-plum-plate switch-header-cs-class" data-class="bg-plum-plate header-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-happy-fisher switch-header-cs-class" data-class="bg-happy-fisher header-text-dark">
+                                        </div>
+                                        <div class="swatch-holder bg-happy-itmeo switch-header-cs-class" data-class="bg-happy-itmeo header-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-mixed-hopes switch-header-cs-class" data-class="bg-mixed-hopes header-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-strong-bliss switch-header-cs-class" data-class="bg-strong-bliss header-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-grow-early switch-header-cs-class" data-class="bg-grow-early header-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-love-kiss switch-header-cs-class" data-class="bg-love-kiss header-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-premium-dark switch-header-cs-class" data-class="bg-premium-dark header-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-happy-green switch-header-cs-class" data-class="bg-happy-green header-text-light">
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <h3 class="themeoptions-heading">
+                            <div>Sidebar Options</div>
+                            <button type="button" class="btn-pill btn-shadow btn-wide ml-auto btn btn-focus btn-sm switch-sidebar-cs-class" data-class="">
+                                Restore Default
+                            </button>
+                        </h3>
+                        <div class="p-3">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <h5 class="pb-2">Choose Color Scheme
+                                    </h5>
+                                    <div class="theme-settings-swatches">
+                                        <div class="swatch-holder bg-primary switch-sidebar-cs-class" data-class="bg-primary sidebar-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-secondary switch-sidebar-cs-class" data-class="bg-secondary sidebar-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-success switch-sidebar-cs-class" data-class="bg-success sidebar-text-dark">
+                                        </div>
+                                        <div class="swatch-holder bg-info switch-sidebar-cs-class" data-class="bg-info sidebar-text-dark">
+                                        </div>
+                                        <div class="swatch-holder bg-warning switch-sidebar-cs-class" data-class="bg-warning sidebar-text-dark">
+                                        </div>
+                                        <div class="swatch-holder bg-danger switch-sidebar-cs-class" data-class="bg-danger sidebar-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-light switch-sidebar-cs-class" data-class="bg-light sidebar-text-dark">
+                                        </div>
+                                        <div class="swatch-holder bg-dark switch-sidebar-cs-class" data-class="bg-dark sidebar-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-focus switch-sidebar-cs-class" data-class="bg-focus sidebar-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-alternate switch-sidebar-cs-class" data-class="bg-alternate sidebar-text-light">
+                                        </div>
+                                        <div class="divider">
+                                        </div>
+                                        <div class="swatch-holder bg-vicious-stance switch-sidebar-cs-class" data-class="bg-vicious-stance sidebar-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-midnight-bloom switch-sidebar-cs-class" data-class="bg-midnight-bloom sidebar-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-night-sky switch-sidebar-cs-class" data-class="bg-night-sky sidebar-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-slick-carbon switch-sidebar-cs-class" data-class="bg-slick-carbon sidebar-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-asteroid switch-sidebar-cs-class" data-class="bg-asteroid sidebar-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-royal switch-sidebar-cs-class" data-class="bg-royal sidebar-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-warm-flame switch-sidebar-cs-class" data-class="bg-warm-flame sidebar-text-dark">
+                                        </div>
+                                        <div class="swatch-holder bg-night-fade switch-sidebar-cs-class" data-class="bg-night-fade sidebar-text-dark">
+                                        </div>
+                                        <div class="swatch-holder bg-sunny-morning switch-sidebar-cs-class" data-class="bg-sunny-morning sidebar-text-dark">
+                                        </div>
+                                        <div class="swatch-holder bg-tempting-azure switch-sidebar-cs-class" data-class="bg-tempting-azure sidebar-text-dark">
+                                        </div>
+                                        <div class="swatch-holder bg-amy-crisp switch-sidebar-cs-class" data-class="bg-amy-crisp sidebar-text-dark">
+                                        </div>
+                                        <div class="swatch-holder bg-heavy-rain switch-sidebar-cs-class" data-class="bg-heavy-rain sidebar-text-dark">
+                                        </div>
+                                        <div class="swatch-holder bg-mean-fruit switch-sidebar-cs-class" data-class="bg-mean-fruit sidebar-text-dark">
+                                        </div>
+                                        <div class="swatch-holder bg-malibu-beach switch-sidebar-cs-class" data-class="bg-malibu-beach sidebar-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-deep-blue switch-sidebar-cs-class" data-class="bg-deep-blue sidebar-text-dark">
+                                        </div>
+                                        <div class="swatch-holder bg-ripe-malin switch-sidebar-cs-class" data-class="bg-ripe-malin sidebar-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-arielle-smile switch-sidebar-cs-class" data-class="bg-arielle-smile sidebar-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-plum-plate switch-sidebar-cs-class" data-class="bg-plum-plate sidebar-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-happy-fisher switch-sidebar-cs-class" data-class="bg-happy-fisher sidebar-text-dark">
+                                        </div>
+                                        <div class="swatch-holder bg-happy-itmeo switch-sidebar-cs-class" data-class="bg-happy-itmeo sidebar-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-mixed-hopes switch-sidebar-cs-class" data-class="bg-mixed-hopes sidebar-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-strong-bliss switch-sidebar-cs-class" data-class="bg-strong-bliss sidebar-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-grow-early switch-sidebar-cs-class" data-class="bg-grow-early sidebar-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-love-kiss switch-sidebar-cs-class" data-class="bg-love-kiss sidebar-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-premium-dark switch-sidebar-cs-class" data-class="bg-premium-dark sidebar-text-light">
+                                        </div>
+                                        <div class="swatch-holder bg-happy-green switch-sidebar-cs-class" data-class="bg-happy-green sidebar-text-light">
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <h3 class="themeoptions-heading">
+                            <div>Main Content Options</div>
+                            <button type="button" class="btn-pill btn-shadow btn-wide ml-auto active btn btn-focus btn-sm">Restore Default
+                            </button>
+                        </h3>
+                        <div class="p-3">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <h5 class="pb-2">Page Section Tabs
+                                    </h5>
+                                    <div class="theme-settings-swatches">
+                                        <div role="group" class="mt-2 btn-group">
+                                            <button type="button" class="btn-wide btn-shadow btn-primary btn btn-secondary switch-theme-class" data-class="body-tabs-line">
+                                                Line
+                                            </button>
+                                            <button type="button" class="btn-wide btn-shadow btn-primary active btn btn-secondary switch-theme-class" data-class="body-tabs-shadow">
+                                                Shadow
+                                            </button>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>        <div class="app-main">
+                <div class="app-sidebar sidebar-shadow bg-asteroid sidebar-text-light">
+                    <div class="app-header__logo">
+                        <div class="logo-src"></div>
+                        <div class="header__pane ml-auto">
+                            <div>
+                                <button type="button" class="hamburger close-sidebar-btn hamburger--elastic is-active" data-class="closed-sidebar">
+                                    <span class="hamburger-box">
+                                        <span class="hamburger-inner"></span>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="app-header__mobile-menu">
+                        <div>
+                            <button type="button" class="hamburger hamburger--elastic mobile-toggle-nav">
+                                <span class="hamburger-box">
+                                    <span class="hamburger-inner"></span>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="app-header__menu">
+                        <span>
+                            <button type="button" class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
+                                <span class="btn-icon-wrapper">
+                                    <i class="fa fa-ellipsis-v fa-w-6"></i>
+                                </span>
+                            </button>
+                        </span>
+                    </div>    <div class="scrollbar-sidebar">
+                        <div class="app-sidebar__inner">
+                            <ul class="vertical-nav-menu">
+                                <li class="app-sidebar__heading">Dashboard</li>
+                                <li>
+                                    <a href="home.html" class="">
+                                        <i class="metismenu-icon pe-7s-home"></i>
+                                        Dashboard
+                                    </a>
+                                </li>
+                                <li class="app-sidebar__heading">Google Services</li>
+                                <li>
+                                    <a href="gsuite.html" class="">
+                                        <i class="metismenu-icon pe-7s-albums"></i>
+                                        G Suite
+                                    </a>
+                                    <a href="https://www.google.co.in/" class="">
+                                        <i class="metismenu-icon pe-7s-search"></i>
+                                        Google Search
+                                    </a>
+                                </li>
+                                <li class="app-sidebar__heading">Prenium Features</li>
+                                <li>
+                                    <a href="Embed.html?imp=chat" class="">
+                                        <i class="metismenu-icon pe-7s-help2"></i>
+                                        Alienx Atomic Chat
+                                    </a>
+                                    <a href="discord.html" class="">
+                                        <i class="metismenu-icon pe-7s-comment"></i>
+                                        Discord
+                                    </a>
+                                </li>                                
+                                <li class="app-sidebar__heading">Learn</li>
+                                <li>
+                                    <a >
+                                        <i class="metismenu-icon pe-7s-notebook"></i>
+                                        School
+                                        <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                                    </a>
+                                    <ul>
+                                        <li>
+                                            <a href="https://ryangroup.toppr.school/">
+                                                <i class="metismenu-icon"></i>
+                                                Toppr
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://ryandbeta.myclassboard.com/">
+                                                <i class="metismenu-icon">
+                                                </i>MCB
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="zoom.html">
+                                                <i class="metismenu-icon">
+                                                </i>Zoom
+                                            </a>
+                                        </li>
+                                        
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a >
+                                        <i class="metismenu-icon pe-7s-science"></i>
+                                        Simulations
+                                        <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                                    </a>
+                                    <ul>
+                                        <li>
+                                            <a href="Embed.html?imp=neuron">
+                                                <i class="metismenu-icon"></i>
+                                                Neuron
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="Embed.html?imp=light">
+                                                <i class="metismenu-icon">
+                                                </i>Light
+                                            </a>
+                                        </li>
+                                        
+                                        
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a >
+                                        <i class="metismenu-icon pe-7s-note2"></i>
+                                        Important Points
+                                        <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                                    </a>
+                                    <ul>
+                                        <li>
+                                            <a href="Embed.html?imp=chem">
+                                                <i class="metismenu-icon">
+                                                </i>Chemistry
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="Embed.html?imp=bio">
+                                                <i class="metismenu-icon">
+                                                </i>Biology
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="Embed.html?imp=phy">
+                                                <i class="metismenu-icon">
+                                                </i>Physics
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="Embed.html?imp=comp">
+                                                <i class="metismenu-icon">
+                                                </i>Computer
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="Embed.html?imp=eng1">
+                                                <i class="metismenu-icon">
+                                                </i>English-1
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="Embed.html?imp=eng2">
+                                                <i class="metismenu-icon">
+                                                </i>English-2
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="Embed.html?imp=hc">
+                                                <i class="metismenu-icon">
+                                                </i>History &amp; Civics
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="Embed.html?imp=geo">
+                                                <i class="metismenu-icon">
+                                                </i>Geography
+                                            </a>
+                                        </li>
+                                         
+                                        <li>
+                                            <a href="Embed.html?imp=hindi">
+                                                <i class="metismenu-icon">
+                                                </i>Hindi
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="Embed.html?imp=maths">
+                                                <i class="metismenu-icon">
+                                                </i>Maths
+                                            </a>
+                                        </li>
+                                        
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a >
+                                        <i class="metismenu-icon pe-7s-news-paper"></i>
+                                        Previous Years Papers
+                                        <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                                    </a>
+                                    <ul>
+                                        <li>
+                                            <a href="Embed.html?pip=chem">
+                                                <i class="metismenu-icon">
+                                                </i>Chemistry
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="Embed.html?pip=bio">
+                                                <i class="metismenu-icon">
+                                                </i>Biology
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="Embed.html?pip=phy">
+                                                <i class="metismenu-icon">
+                                                </i>Physics
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="Embed.html?pip=comp">
+                                                <i class="metismenu-icon">
+                                                </i>Computer
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="Embed.html?pip=eng1">
+                                                <i class="metismenu-icon">
+                                                </i>English-1
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="Embed.html?pip=eng2">
+                                                <i class="metismenu-icon">
+                                                </i>English-2
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="Embed.html?pip=hc">
+                                                <i class="metismenu-icon">
+                                                </i>History &amp; Civics
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="Embed.html?pip=geo">
+                                                <i class="metismenu-icon">
+                                                </i>Geography
+                                            </a>
+                                        </li>
+                                        
+                                        <li>
+                                            <a href="Embed.html?pip=hindi">
+                                                <i class="metismenu-icon">
+                                                </i>Hindi
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="Embed.html?pip=maths">
+                                                <i class="metismenu-icon">
+                                                </i>Maths
+                                            </a>
+                                        </li>
+                                        
+                                    </ul>
+                                </li>
+                                
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>    <div class="app-main__outer">
+                    <div class="app-main__inner">
+                        <div class="cards-list">
+  
+                            <div class="card 1" >
+                              <a href="https://docs.google.com/document" class="card_image"> <img src="https://images.idgesg.net/images/article/2019/05/google-docs-logo-100796136-large.jpg"> </a>
+                              <div class="card_title title-black">
+                                <p><a href="https://docs.google.com/document">Docs</a></p>
+                              </div>
+                            </div></a>
+                            
+                              <div class="card 2">
+                              <a href="https://docs.google.com/presentation/" class="card_image">
+                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANQAAADtCAMAAADwdatPAAAAdVBMVEX/wQf39/f/////7LP/oAD/vQD48Nz/vwD3+f373JL/xB356sf/ykf/67////v/5Kn//PH46tT/xzL/77r/pBD/mgD/pgL87sX/+er39Oz9zE7/0WP/4aD/6Lf/yTv/yUL/2YP90mv64q357M772oz39On/qxMlUHWIAAAEPElEQVR4nO3cbVvaMBiG4ZaZJiCiYxsTREHY9v9/4sBXRJI+IS/NXe/rox9oziOhHlCSqu5hVdcDSBFRKBGFElEofWWUSV9e1O56zfYyeRFVbShjmuFKq/SNfsdTtaBMc6e0rtKnpz/iqdwo80flED2jvkVTuVELlYf0jIqmcqIeMk3TKyqWyoEyi3ymF1QklR1lhtnW3jsqjsqO+pvT9IaKorKizGPGxXeAiqGyovJO1AEqgsqGMtdZJ+oQFa6you66QwWrrMsvK+kIFaqyoeZ531JHqECVDZX5PnGMClPZUE3HqCBVsagQVbmoAFXBqPNVJaPOVhWNOldVNupMVeGo81Slo85SFY86R1U+6gwVAMpfhYDyVkGgfFUYKE8VCMpPhYLyUsGgfFQ4KA8VEEquQkKJVVAoqQoLJVSBoWQqNJRIBYeSqPBQAhUgql2FiGpVQaLaVJioFhUoyq1CRTlVsCiXChflUBWE8s2uKgVVVf9++nbx3aIqB1XNLjz7BYDyVkGgfFUYKE8VCMpPhYLyUsGgfFQ4KA8VEEquQkKJVVAoqQoLJVSBoWQqNJRIBYeSqPBQAhUgql2FiGpVQaLaVJioFhUoyq1CRTlVsCiXChflUAGj7CpklFUFjbKpsFEWFTjqtAoddVIFjzqlwkedUPUA9VnVB9QnVS9Qx6p+oI5UPUF9VPUF9UHVG9Shqj+oA1WPUO+qPqHeVL1Cvar6hXpRpUfp4EMAfY7cm+VAKXW3vL8K6n55p+QXnSVHabWcDCI0WcqPE5wlRumHmxikfTfy0/dmSVF6HIu0byxXJUTpUZSl99pkJFYl/GWmuoxpGgwu5VduUqHiLr594gWoGsvgg1HqPjbqXnzpdKjb2Kjb7lE6tmkw6H75jeKjRl2jdAqUcKqIIooooogi6sujboIqFDUN+S5pWihK/kn8xOuMiSKKKKKIIooooogiiiiiiCKKKKKIIooooogiiiiiiCKKKKKIIoqoL4pa6YBWhaImQRWKihVRRBFFFFFEEeWqj7ty+rl/qpc73dR1bNR19yj9EBsl3pSdDlWpq7imK499vslQlY62c37fjfzjc1LUNOI+88m0DNTuH3ATy9TId84nRlVaraPc2G/X8vMokqP2rNV6eR3Ucr3yIqVH7c94CTzkRfuc8ZIJ1UFEEdVhRBHVYUQR1WFEEdVhRBHVYUQR1WFE7ZsjoOaeqLrrEUuyjt3ydxPyk7A86bHlHFA7alg+auiNKv9OYT2x1f6eMovCp0ovbCYHalv4VKmtP6o2j0VPlX60mhyouvZ5VpQ7PXIM3IEyjfdziGxpbb1LtMyUaapCVbpymZyo2szHRd4t1HjuMrlRO9am8ny8lzytqo2T1IqqTb1Z6KfHfEW0G8liU7eYWlE7lplvN8thES0327lpI0lQT65ykoxXhEKLKJSIQokolIhC6T+R0O+/6JU4IgAAAABJRU5ErkJggg==">
+                              </a>
+                              <div class="card_title title-black">
+                                <p><a href="https://docs.google.com/presentation/">Slides</a></p>
+                              </div>
+                            </div>
+                            
+                            <div class="card 3">
+                              <a href="https://docs.google.com/spreadsheets/" class="card_image">
+                                <img src="https://cdn.iconscout.com/icon/free/png-512/google-sheets-4-569453.png">
+                              </a>
+                              <div class="card_title title-black">
+                                <p><a href="https://docs.google.com/spreadsheets/">Sheets</a></p>
+                              </div>
+                            </div>
+                              
+                              <div class="card 4">
+                              <a href="https://keep.google.com/" class="card_image">
+                                <img src="https://www.kindpng.com/picc/m/384-3847729_google-keep-icon-google-keep-ios-icon-hd.png">
+                              </a>
+                              <div class="card_title title-black">
+                                <p><a href="https://keep.google.com/">Keep</a></p>
+                              </div>
+                              </div>
+                              <div class="card 1">
+                                <a href="https://classroom.google.com/" class="card_image"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ49SkcjKDyAhGa-DbQ96-UuW4wGT15lFmJR0zqPDoibJkTmdGgDaAQXVgM_7kYk2QRuDM&usqp=CAU"> </a>
+                                <div class="card_title title-black">
+                                  <p><a href="https://classroom.google.com/">Classroom</a></p>
+                                </div>
+                              </div>
+                              
+                                <div class="card 2">
+                                <a href="https://jamboard.google.com/" class="card_image">
+                                  <img src="https://i.pinimg.com/736x/72/21/94/7221946fee2523c18eb2302e20e89156.jpg">
+                                </a>
+                                <div class="card_title title-black">
+                                  <p><a href="https://jamboard.google.com/">Jamboard</a></p>
+                                </div>
+                              </div>
+                              
+                              <div class="card 3">
+                                <a href="https://mail.google.com/mail/" class="card_image">
+                                  <img src="data:image/jpeg;base64,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">
+                                </a>
+                                <div class="card_title title-black">
+                                  <p><a href="https://mail.google.com/mail/">Gmail</a></p>
+                                </div>
+                              </div>
+                                
+                                <div class="card 4">
+                                <a href="https://meet.google.com/" class="card_image">
+                                  <img src="https://i.pinimg.com/originals/65/dd/b8/65ddb8132e54098ebf27841a7f5ca722.jpg">
+                                </a>
+                                <div class="card_title title-black">
+                                  <p><a href="https://meet.google.com/">Meet</a></p>
+                                </div>
+                                </div>
+                            
+                            </div>             
+                    </div>
+                      </div>
+                 
+        </div>
+    </div>
+<script type="text/javascript" src="./assets/scripts/main.js"></script></body>
+</html>

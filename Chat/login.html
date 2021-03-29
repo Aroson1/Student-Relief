@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="site.webmanifest">
+    <script defer src="https://widget-js.cometchat.io/v2/cometchatwidget.js"></script>
+    <style>
+    .cont {
+  
+  background-image: url("Back.jpg");
+  background-size: cover;
+  
+  
+}
+    </style>
+</head>
+
+<body class="cont">
+    <div id="cometchat"></div>
+    <script>
+        var pass = localStorage.getItem("password");
+        var UID = localStorage.getItem("uid");
+        
+    window.addEventListener('DOMContentLoaded', (event) => {
+        CometChatWidget.init({
+            "appID": "297364ebd050b2a",
+            "appRegion": "us",
+            "authKey": "0834d395a87eac7f664280fe26f06e06052bef4b"
+        }).then(response => {
+            console.log("Initialization completed successfully");
+            
+            CometChatWidget.login({
+                "uid": UID
+            }).then(response => {
+                CometChatWidget.launch({
+                    "widgetID": "328a1ace-c425-426d-a113-61ae6853d340",
+                    "target": "#cometchat",
+                    "roundedCorners": "true",
+                    "height": "600px",
+                    "width": "800px",
+                    "defaultID": 'class', 
+                    "defaultType": 'group' 
+                });
+            }, error => {
+                console.log("User login failed with error:", error);
+                
+            });
+        }, error => {
+            console.log("Initialization failed with error:", error);
+            
+        });
+    });
+    </script>
+</body>
+
+</html>
